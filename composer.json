@@ -1,0 +1,23 @@
+{
+  "name": "ebski/pdo-handler",
+  "version": "0.1.0",
+  "description": "Handler used to make working with PDO easier",
+  "keywords": ["pdo"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ebbe Vig Nielsen",
+      "email": "Ebski91@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ebski\\PdoHandler\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+    "ext-pdo": "*"
+  }
+}

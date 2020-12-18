@@ -11,19 +11,14 @@ use PDO;
  */
 abstract class Accessor
 {
-    protected PDO $connection;
-
-    protected PDOUtils $pdoUtils;
-
     /**
      * @param PDO $connection
      * @param PDOUtils $pdoUtils
      */
-    public function __construct(PDO $connection, PDOUtils $pdoUtils = null)
-    {
-        $this->connection = $connection;
-        $this->pdoUtils = $pdoUtils ?? new PDOUtils();
-    }
+    public function __construct(
+        protected PDO $connection,
+        protected PDOUtils $pdoUtils
+    ) {}
 
     public function beginTransaction(): void
     {

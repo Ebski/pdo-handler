@@ -9,18 +9,6 @@ namespace Ebski\PdoHandler;
  */
 class Connection
 {
-    private string $host;
-
-    private string $port;
-
-    private string $schema;
-
-    private string $user;
-
-    private string $pass;
-
-    private string $charset;
-
     /**
      * @param string $host
      * @param string $port
@@ -30,20 +18,13 @@ class Connection
      * @param string $charset
      */
     public function __construct(
-        string $host,
-        string $port,
-        string $schema,
-        string $user,
-        string $pass,
-        string $charset
-    ) {
-        $this->host = $host;
-        $this->port = $port;
-        $this->schema = $schema;
-        $this->user = $user;
-        $this->pass = $pass;
-        $this->charset = $charset;
-    }
+        private string $host,
+        private string $port,
+        private string $schema,
+        private string $user,
+        private string $pass,
+        private string $charset
+    ) {}
 
     /**
      * @return string
